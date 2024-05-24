@@ -1,6 +1,25 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// class Solution {
+// public:
+//     bool canJump(vector<int>& nums) {
+
+//         if(nums.size() == 1 && nums[0] == 0) return true;
+//         if(nums.size() <= 2 && nums[0] != 0 && nums[0] <= 2) return true;
+//         if(nums.size() <= 2 && nums[0] == 0) return false;
+
+//         int i = 0;
+//         while(true){
+//              if(nums[i] <= nums.size()-1){
+//                 i +=  nums[i];
+//                 if(i == nums.size()-1) return true;
+//             }else return false;
+//         }
+//         return false;
+//     }
+// };
+
 class Solution {
 public:
     bool canJump(vector<int>& nums) {

@@ -39,7 +39,16 @@ MMMMMM:   -~        / |MMMMMMMb
 using namespace std;
 
 int main() {
-
+int testase; cin >> testase;
+while(testase--){
+  int x, y; cin >> x >> y;
+  if(x > y){
+   int temp = x;
+    x = y;
+    y = temp;
+  }
+  cout << x <<" " << y << "\n";
+}
 
   return 0;
 }      

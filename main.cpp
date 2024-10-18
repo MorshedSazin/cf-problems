@@ -1,34 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
-// using ll = long long;
 
-void solution() {
-    int a,b; scanf("%d", &a);
-    b=a;
-    for(int i = 0; i <= a-1; i++){
-        for(int j = a-1; j >= 0; j--){
-            if(j+i==9){
-                cout<<'\\';
-            } else cout <<'*';
-        }
-        cout << endl;
-        b--;
-    }   
+void solition() {
+    int n;
+    string s,final;
+    cin>>n>>s;
+    deque<char> q;
+    for (int i = 0; i < s.length(); ++i) {
+        (i % 2 == 0)? q.push_back(s[i]):q.push_front(s[i]);
+    }
+    final = string(q.begin(), q.end());
+    cout << final << endl;
 }
 
 int main() {
-    //int t;scanf("%d",&t);
-     solution();
+    int t;scanf("%d",&t);
+    while(t--)solition();
     return 0;
 }
-
-/*
-00 01 02 03 04
-10 11 12 13 14
-21 21 22 23 34
-30 31 32 33 34
-40 41 42 43 44
-
-
-
-*/

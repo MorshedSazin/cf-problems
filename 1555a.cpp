@@ -19,14 +19,17 @@ typedef unsigned long long int ull;
 // partition(arr.begin(), arr.end(), [](int x) { return x % 2 == 0; });
 
 void solution() {
-    ll n; cin >> n;
-    vector<ll> arr(n);
-    for(int i = 0; i < n; ++i) s2(arr[i]);
-     int ans = accumulate(arr.begin(),arr.end(),arr[0],std::bit_and<int>());
-    cout<<ans<<endl;
-
+    ll n;
+    ull time=0;
+    cin >> n;
+    if(n<6)time=15;
+    else if(n<6 && n<8)time = 20;
+    else{
+        time = max(6LL, n + 1) / 2 * 5; 
+    }
+cout<<time<<endl;
+    
 }
-
 
 int main() {
     int t;sf(t);
